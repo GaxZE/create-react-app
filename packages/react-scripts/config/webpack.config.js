@@ -562,6 +562,8 @@ module.exports = function(webpackEnv) {
         experimentalHMR: true,
         useWeakDeps: true,
         useEntryModuleInjection: true,
+        // default filename: "[name].bundle.css"
+        filename: isEnvProduction ? "static/css/[name].[hash:8].bundle.css" : undefined
       }),
       // Moment.js is an extremely popular library that bundles large locale files
       // by default due to how Webpack interprets its code. This is a practical
